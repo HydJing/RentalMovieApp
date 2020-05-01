@@ -1,9 +1,10 @@
-﻿@model RentalMovieApp.Models.Movie
+﻿@model RentalMovieApp.ViewModels.RandomMovieViewModel
 
 @{
     ViewBag.Title = "Random";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Name</h2>
+<h2>@Model.Movie.Name</h2>
 
+@Model.Customers;
