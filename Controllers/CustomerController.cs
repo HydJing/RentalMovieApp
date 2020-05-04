@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Web.Mvc;
 using RentalMovieApp.Models;
+using System.Data.Entity;
 
 namespace RentalMovieApp.Controllers
 {
@@ -19,7 +20,7 @@ namespace RentalMovieApp.Controllers
         }
         public ViewResult Index()
         {
-            var customers = _context.Customers.ToList();
+            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
 
             return View(customers);
         }
