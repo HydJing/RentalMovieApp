@@ -195,6 +195,10 @@
     <Compile Include="Migrations\202005041438411_SeedMembershipTypeNameData.Designer.cs">
       <DependentUpon>202005041438411_SeedMembershipTypeNameData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005051342496_AddBirthdayToCustomer.cs" />
+    <Compile Include="Migrations\202005051342496_AddBirthdayToCustomer.Designer.cs">
+      <DependentUpon>202005051342496_AddBirthdayToCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -300,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005041438411_SeedMembershipTypeNameData.resx">
       <DependentUpon>202005041438411_SeedMembershipTypeNameData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005051342496_AddBirthdayToCustomer.resx">
+      <DependentUpon>202005051342496_AddBirthdayToCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
