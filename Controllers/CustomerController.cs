@@ -3,6 +3,7 @@ using System.Linq;
 using System.Web.Mvc;
 using RentalMovieApp.Models;
 using System.Data.Entity;
+using RentalMovieApp.ViewModels;
 
 namespace RentalMovieApp.Controllers
 {
@@ -17,6 +18,15 @@ namespace RentalMovieApp.Controllers
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();
+        }
+        public ActionResult New()
+        {
+            var membershipTypes = _context.MembershipTypes.ToList();
+            var ViewModel = new NewCustomerViewModel
+            {
+                MembershipTypes = membershipTypes
+            };
+            return View(ViewModel);
         }
         public ViewResult Index()
         {
