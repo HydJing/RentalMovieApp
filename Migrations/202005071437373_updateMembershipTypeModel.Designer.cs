@@ -7,13 +7,13 @@ namespace RentalMovieApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddMembershipTypeName : IMigrationMetadata
+    public sealed partial class updateMembershipTypeModel : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddMembershipTypeName));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(updateMembershipTypeModel));
         
         string IMigrationMetadata.Id
         {
-            get { return "202005041438073_AddMembershipTypeName"; }
+            get { return "202005071437373_updateMembershipTypeModel"; }
         }
         
         string IMigrationMetadata.Source
