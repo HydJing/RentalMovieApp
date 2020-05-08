@@ -183,6 +183,10 @@
     <Compile Include="Migrations\202005071437373_updateMembershipTypeModel.Designer.cs">
       <DependentUpon>202005071437373_updateMembershipTypeModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005081159119_AddGenresToIdentityModel.cs" />
+    <Compile Include="Migrations\202005081159119_AddGenresToIdentityModel.Designer.cs">
+      <DependentUpon>202005081159119_AddGenresToIdentityModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -194,6 +198,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -260,6 +265,7 @@
     <Content Include="Views\Movie\Index.cshtml" />
     <Content Include="Views\Movie\Details.cshtml" />
     <Content Include="Views\Customer\CustomerForm.cshtml" />
+    <Content Include="Views\Movie\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -283,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005071437373_updateMembershipTypeModel.resx">
       <DependentUpon>202005071437373_updateMembershipTypeModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005081159119_AddGenresToIdentityModel.resx">
+      <DependentUpon>202005081159119_AddGenresToIdentityModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
