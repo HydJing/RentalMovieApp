@@ -23,3 +23,9 @@ Section 4
 - Rendering Drop-down lists(razor view)
 - Adding data(edit and save function in controller)
 - Updating data(edit and save function in controller)
+
+Section 5
+- Data Annotations(model property attribute, e.g. Rerquied, Range etc  )
+- Custom Validation(new model with updated model property)
+- Client-side validation(added in razor view)
+- Anti-forgery Tokens(added in razor view)
