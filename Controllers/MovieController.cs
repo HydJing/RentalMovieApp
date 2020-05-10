@@ -42,9 +42,8 @@ namespace RentalMovieApp.Controllers
                 return HttpNotFound();
             }
 
-            var movieFormViewModel = new MovieFormViewModel
+            var movieFormViewModel = new MovieFormViewModel(movie)
             {
-                Movie = movie,
                 Genres = _context.Genres.ToList()
             };
 
@@ -71,10 +70,23 @@ namespace RentalMovieApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
+
+            if (!ModelState.IsValid)
+            {
+                var movieFormViewModel = new MovieFormViewModel(movie)
+                {
+                    Genres = _context.Genres.ToList()
+                };
+
+                return View("MovieForm", movieFormViewModel);
+            }
+
             if (movie.Id == 0)
             {
+                movie.DateAdded = DateTime.Now;
                 _context.Movies.Add(movie);
             }
             else
@@ -82,12 +94,11 @@ namespace RentalMovieApp.Controllers
                 var movieInDb = _context.Movies.Single(c => c.Id == movie.Id);
                 movieInDb.Name = movie.Name;
                 movieInDb.GenreId = movie.GenreId;
-                movieInDb.DateAdded = movie.DateAdded;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
                 movieInDb.NumberInStock = movie.NumberInStock;
             }
 
-            try
+            /*try
             {
                 _context.SaveChanges();
             }
@@ -106,7 +117,10 @@ namespace RentalMovieApp.Controllers
                     }
                 }
                 throw;
-            }
+            }*/
+
+            _context.SaveChanges();
+
 
             return RedirectToAction("Index", "Movie");
         }
