@@ -29,3 +29,10 @@ Section 5
 - Custom Validation(new model with updated model property)
 - Client-side validation(added in razor view)
 - Anti-forgery Tokens(added in razor view)
+
+Section 6
+- Postman
+- Data Transfer Object(Dto)
+- Auto Mapper
+- Action Results(method type)
+- Camel Notation(api return fields name in lowercase)
