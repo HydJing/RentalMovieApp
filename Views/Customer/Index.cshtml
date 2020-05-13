@@ -30,7 +30,7 @@
 }
 else
 {
-    <table class="table table-bordered table-hover">
+    <table id="customers" class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>Customer</th>
@@ -38,6 +38,7 @@ else
                 <th>Is Subscribed</th>
                 <th>Membership Type</th>
                 <th>Discount Rate</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -49,8 +50,37 @@ else
                 <td>@(customer.IsSubscribedToNewsletter ? "Yes" : "No")</td>
                 <td>@customer.MembershipType.Name</td>
                 <td>@customer.MembershipType.DiscountRate%</td>
+                <td>
+                    <button data-customerid="@customer.Id" class="btn-link js-delete">Delete</button>
+                </td>
             </tr>
             }
         </tbody>
     </table>
+}
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#customers").DataTable();
+
+            $("#customers").on("click", ".js-delete", function () {
+
+                var button = $(this);
+
+                bootbox.confirm("Are you sure to delete this customer?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/customers/" + button.attr("data-customerid"),
+                            method: "DELETE",
+                            success: function () {
+                                button.parents("tr").remove();
+                            }
+                        })
+                    }
+                });
+            });
+        });
+    </script>
 }
