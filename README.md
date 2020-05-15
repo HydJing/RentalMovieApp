@@ -36,3 +36,8 @@ Section 6
 - Auto Mapper
 - Action Results(method type)
 - Camel Notation(api return fields name in lowercase)
+
+Section 7
+- Call APIs using jQuery Ajax(load the data from API in index html)
+- Bootbox
+- DataTable(show data as datatable)
