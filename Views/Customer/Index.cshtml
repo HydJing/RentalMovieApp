@@ -80,9 +80,6 @@
             $("#customers").on("click", ".js-delete", function (e) {
 
                 var button = $(this);
-                console.log(111)
-                e.preventDefault();
-                console.log(222)
 
                 bootbox.confirm("Are you sure to delete this customer?", function (result) {
                     if (result) {
