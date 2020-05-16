@@ -24,6 +24,7 @@ namespace RentalMovieApp.Controllers
             _context.Dispose();
         }
 
+        [Authorize(Roles = "CanManageMovies")]
         public ActionResult New()
         {
             var ViewModel = new MovieFormViewModel
@@ -52,7 +53,12 @@ namespace RentalMovieApp.Controllers
 
         public ViewResult Index()
         {
-            return View();
+            if (User.IsInRole(RoleName.CanManageMovies))
+            {
+                return View("List");
+            }
+            return View("ReadOnlyList");
+
         }
 
         public ActionResult Details(int id)
@@ -69,6 +75,7 @@ namespace RentalMovieApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Save(Movie movie)
         {
 
