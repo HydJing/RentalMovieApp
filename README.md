@@ -41,3 +41,9 @@ Section 7
 - Call APIs using jQuery Ajax(load the data from API in index html)
 - Bootbox
 - DataTable(show data as datatable)
+
+Section 8
+Users:
+admin@rentalmovie.com
+guest@rentalmovie.com
+Password: Password1!

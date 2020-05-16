@@ -13,7 +13,6 @@
         <tr>
             <th>Movie</th>
             <th>Genre</th>
-            <th>Edit</th>
         </tr>
     </thead>
 </table>
@@ -34,12 +33,6 @@
                     },
                     {
                         data: "genre.name"
-                    },
-                    {
-                        data: "name",
-                        render: function (data, type, movie) {
-                            return "<a href='/movie/edit/" + movie.id + "'>Edit</a>";
-                        }
                     }
                 ]
             });
