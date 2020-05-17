@@ -211,6 +211,10 @@
     <Compile Include="Migrations\202005162153051_seeRoleUsers.Designer.cs">
       <DependentUpon>202005162153051_seeRoleUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005162220574_AddDrivingLicenseToApplicationUser.cs" />
+    <Compile Include="Migrations\202005162220574_AddDrivingLicenseToApplicationUser.Designer.cs">
+      <DependentUpon>202005162220574_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -498,6 +502,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005162153051_seeRoleUsers.resx">
       <DependentUpon>202005162153051_seeRoleUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005162220574_AddDrivingLicenseToApplicationUser.resx">
+      <DependentUpon>202005162220574_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
