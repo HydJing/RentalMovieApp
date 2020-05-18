@@ -54,9 +54,9 @@ namespace RentalMovieApp
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "334858587501456",
+               appSecret: "4938b184f0718b6ecf82f4a7762feb33");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
