@@ -215,6 +215,10 @@
     <Compile Include="Migrations\202005162220574_AddDrivingLicenseToApplicationUser.Designer.cs">
       <DependentUpon>202005162220574_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005191244052_AddPhoneToRegisterPage.cs" />
+    <Compile Include="Migrations\202005191244052_AddPhoneToRegisterPage.Designer.cs">
+      <DependentUpon>202005191244052_AddPhoneToRegisterPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -505,6 +509,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005162220574_AddDrivingLicenseToApplicationUser.resx">
       <DependentUpon>202005162220574_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005191244052_AddPhoneToRegisterPage.resx">
+      <DependentUpon>202005191244052_AddPhoneToRegisterPage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
