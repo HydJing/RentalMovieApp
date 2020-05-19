@@ -42,8 +42,13 @@ Section 7
 - Bootbox
 - DataTable(show data as datatable)
 
+
 Section 8
-Users:
+- Users:
 admin@rentalmovie.com
 guest@rentalmovie.com
 Password: Password1!
+- Authorize attribute(show edit and delete button for admin type account only)
+- Seed users and roles(add admin and guest in migration)
+- Extend ASP.NET Identity users
+- OAuth and social logins(use FB to login)
