@@ -199,6 +199,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\API\CustomersController.cs" />
     <Compile Include="Controllers\API\MoviesController.cs" />
+    <Compile Include="Controllers\API\NewRentalsController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -207,6 +208,7 @@
     <Compile Include="DTO\GenreDto.cs" />
     <Compile Include="DTO\MembershipTypeDto.cs" />
     <Compile Include="DTO\MovieDto.cs" />
+    <Compile Include="DTO\NewRentalDto.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -235,6 +237,10 @@
     <Compile Include="Migrations\202005191244052_AddPhoneToRegisterPage.Designer.cs">
       <DependentUpon>202005191244052_AddPhoneToRegisterPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005211230478_AddMovieAvailableStock.cs" />
+    <Compile Include="Migrations\202005211230478_AddMovieAvailableStock.Designer.cs">
+      <DependentUpon>202005211230478_AddMovieAvailableStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -245,6 +251,7 @@
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\MovieValidStockRange.cs" />
+    <Compile Include="Models\NewRental.cs" />
     <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -528,6 +535,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005191244052_AddPhoneToRegisterPage.resx">
       <DependentUpon>202005191244052_AddPhoneToRegisterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005211230478_AddMovieAvailableStock.resx">
+      <DependentUpon>202005211230478_AddMovieAvailableStock.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
