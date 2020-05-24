@@ -22,10 +22,17 @@ namespace RentalMovieApp.Controllers.API
         }
 
         //GET /api/movies
-        public IHttpActionResult GetMovies()
+        public IHttpActionResult GetMovies(string query = null)
         {
-            var movieDtos = _context.Movies
-                .Include(m => m.Genre)
+
+            var movieQuery = _context.Movies.Include(m => m.Genre);
+
+            if (!String.IsNullOrWhiteSpace(query))
+            {
+                movieQuery = movieQuery.Where(c => c.Name.Contains(query));
+            }
+
+            var movieDtos = movieQuery
                 .ToList()
                 .Select(Mapper.Map<Movie, MovieDto>);
 
