@@ -52,3 +52,13 @@ Password: Password1!
 - Seed users and roles(add admin and guest in migration)
 - Extend ASP.NET Identity users
 - OAuth and social logins(use FB to login)
+
+Section 9
+- Understand the problem
+- Start with backend
+- Think of the inputs and the output
+- Decalre simple API
+- Extende the domain model(if required)
+- build the happy path
+- add the details one by one
+- Move on to the fron end
