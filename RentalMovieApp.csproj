@@ -265,6 +265,7 @@
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404.html" />
     <Content Include="Content\bootstrap-slate.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -519,6 +520,7 @@
     <Content Include="Views\Movie\MovieForm.cshtml" />
     <Content Include="Views\Movie\ReadOnlyList.cshtml" />
     <Content Include="Views\NewRental\New.cshtml" />
+    <Content Include="AppSettingsConfigs.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
